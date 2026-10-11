@@ -1,539 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Surinder Singh | Cyber Security Enthusiast</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <link rel="icon" type="image/png"
-    href="https://img.icons8.com/ios-filled/50/00FF88/security-checked.png" />
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      animation: fadeIn 0.8s ease-in-out;
-      background: linear-gradient(-45deg, #000000, #001a12, #000000, #002b1f);
-      background-size: 400% 400%;
-      animation:
-        gradient 10s ease infinite,
-        fadeIn 0.8s ease-in-out;
-      overflow-x: hidden;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    /* Cursor Effect */
-    #cursor {
-      width: 20px;
-      height: 20px;
-      background: #00ff88;
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      box-shadow: 0 0 20px #00ff88;
-      z-index: 9999;
-    }
-
-    /* Glassmorphism */
-    .glass {
-      backdrop-filter: blur(14px);
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(0, 255, 136, 0.3);
-      box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
-    }
-
-    /* Light Mode */
-    .light-mode {
-      background: #f4f4f4 !important;
-      color: black !important;
-    }
-
-    .light-mode nav,
-    .light-mode .glass {
-      background: rgba(255, 255, 255, 0.7);
-      color: black;
-      border-color: #00aa66;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surinder Singh | Cybersecurity & Full-Stack Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #020617;
+            color: #f1f5f9;
+            font-family: 'JetBrains Mono', monospace;
+            background-image: radial-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .cyber-card {
+            position: relative;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            backdrop-filter: blur(12px);
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        .cyber-card:hover {
+            border-color: rgba(16, 185, 129, 0.6);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+        }
+    </style>
 </head>
-
-<body class="text-green-400 font-sans">
-
-  <!-- Custom Cursor -->
-  <div id="cursor"></div>
-
-  <!-- Navbar -->
-  <nav
-    class="glass flex items-center justify-between p-4 border-b border-green-500 sticky top-0 z-50">
-
-    <!-- Logo -->
-    <div class="flex items-center space-x-3">
-      <img src="/src/logoi.png"
-        alt="Logo"
-        class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover border border-green-500">
-
-      <h1 class="text-xl sm:text-2xl font-bold">
-        Surinder Singh
-      </h1>
-    </div>
-
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex space-x-8 font-semibold text-lg">
-      <li>
-        <a href="index.html"
-          class="hover:text-white transition duration-300 hover:scale-110">
-          Home
-        </a>
-      </li>
-
-      <li>
-        <a href="about.html"
-          class="hover:text-white transition duration-300 hover:scale-110">
-          About
-        </a>
-      </li>
-
-      <li>
-        <a href="projects.html"
-          class="hover:text-white transition duration-300 hover:scale-110">
-          Projects
-        </a>
-      </li>
-
-      <li>
-        <a href="resume.html"
-          class="hover:text-white transition duration-300 hover:scale-110">
-          Resume
-        </a>
-      </li>
-
-      <li>
-        <a href="certifications.html"
-          class="hover:text-white transition duration-300 hover:scale-110">
-          Certifications
-        </a>
-      </li>
-    </ul>
-
-    <!-- Right Side -->
-    <div class="flex items-center gap-4">
-
-      <!-- Dark Mode Toggle -->
-      <button id="theme-toggle"
-        class="border border-green-500 px-4 py-2 rounded-xl hover:bg-green-500 hover:text-black transition duration-300">
-        🌙
-      </button>
-
-      <!-- Hamburger -->
-      <button id="menu-toggle"
-        class="md:hidden text-green-400">
-        <svg class="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="nav-menu"
-      class="hidden absolute top-20 right-4 glass rounded-2xl p-6 w-52 z-50 md:hidden flex flex-col gap-5 text-lg">
-
-      <a href="index.html"
-        class="hover:text-white transition">
-        Home
-      </a>
-
-      <a href="about.html"
-        class="hover:text-white transition">
-        About
-      </a>
-
-      <a href="projects.html"
-        class="hover:text-white transition">
-        Projects
-      </a>
-
-      <a href="resume.html"
-        class="hover:text-white transition">
-        Resume
-      </a>
-
-      <a href="certifications.html"
-        class="hover:text-white transition">
-        Certifications
-      </a>
-
-    </div>
-
-  </nav>
-
-  <!-- Hero Section -->
-  <section
-    class="flex flex-col items-center justify-center text-center min-h-screen px-6">
-
-    <!-- Profile Image -->
-    <img src="/src/banner.jpg"
-      alt="Surinder Singh"
-      class="w-56 h-56 mt-8 md:w-[320px] md:h-[320px] rounded-full object-cover border-4 border-green-500 shadow-[0_0_40px_#00ff88] hover:scale-105 transition duration-500">
-
-    <!-- Name -->
-    <h2 class="text-4xl md:text-6xl font-bold mt-8 mb-5">
-      Hi, I'm Surinder Singh
-    </h2>
-
-    <!-- Typewriter -->
-    <p id="typewriter"
-      class="text-lg md:text-2xl h-10 font-medium">
-    </p>
-
-    <!-- Buttons -->
-    <div class="flex flex-wrap justify-center gap-5 mt-10">
-
-      <a href="projects.html"
-        class="glass px-6 py-3 rounded-2xl hover:scale-105 hover:shadow-[0_0_25px_#00ff88] transition duration-300">
-        View Projects
-      </a>
-
-      <a href="resume.html"
-        class="glass px-6 py-3 rounded-2xl hover:scale-105 hover:shadow-[0_0_25px_#00ff88] transition duration-300">
-        Resume
-      </a>
-
-    </div>
-
-    <!-- Scroll Down -->
-    <a href="#socials"
-      class="mt-20 animate-bounce">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        class="h-12 w-12 text-green-500"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor">
-
-        <path stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M12 4v12" />
-
-        <path stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M5 13l7 7 7-7" />
-      </svg>
-    </a>
-
-  </section>
-
-  <!-- Skills Section -->
-  <section class="px-6 py-20">
-
-    <h2 class="text-4xl font-bold text-center mb-14">
-      Skills
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <div
-        class="glass rounded-3xl p-8 hover:scale-105 hover:shadow-[0_0_30px_#00ff88] transition duration-300">
-        <h3 class="text-2xl font-bold mb-4">
-          Ethical Hacking
-        </h3>
-
-        <p>
-          Skilled in penetration testing, vulnerability analysis, and cyber defense.
-        </p>
-      </div>
-
-      <div
-        class="glass rounded-3xl p-8 hover:scale-105 hover:shadow-[0_0_30px_#00ff88] transition duration-300">
-        <h3 class="text-2xl font-bold mb-4">
-          Network Security
-        </h3>
-
-        <p>
-          Experience in securing networks, firewalls, and monitoring threats.
-        </p>
-      </div>
-
-      <div
-        class="glass rounded-3xl p-8 hover:scale-105 hover:shadow-[0_0_30px_#00ff88] transition duration-300">
-        <h3 class="text-2xl font-bold mb-4">
-          Content Creation
-        </h3>
-
-        <p>
-          Sharing cybersecurity awareness through social platforms and videos.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- What I'm Learning Section -->
-<section class="max-w-6xl mx-auto px-6 py-20">
-
-  <h2 class="text-4xl font-bold text-center mb-14">
-    What I'm Learning
-  </h2>
-
-  <div class="grid md:grid-cols-3 gap-8">
-
-    <!-- Card 1 -->
-    <div
-      class="glass rounded-3xl p-8 hover:scale-105 hover:shadow-[0_0_30px_#00ff88] transition duration-300">
-
-      <div class="text-5xl mb-5">
-        🛡️
-      </div>
-
-      <h3 class="text-2xl font-bold mb-4">
-        Learning
-      </h3>
-
-      <p class="text-lg leading-relaxed">
-        Deep diving into 
-        <span class="font-semibold text-white">
-          Penetration Testing
-        </span>
-        and ethical hacking methodologies.
-      </p>
-
-    </div>
-
-    <!-- Card 2 -->
-    <div
-      class="glass rounded-3xl p-8 hover:scale-105 hover:shadow-[0_0_30px_#00ff88] transition duration-300">
-
-      <div class="text-5xl mb-5">
-        🤖
-      </div>
-
-      <h3 class="text-2xl font-bold mb-4">
-        Exploring
-      </h3>
-
-      <p class="text-lg leading-relaxed">
-        Researching how 
-        <span class="font-semibold text-white">
-          AI can improve Cybersecurity
-        </span>
-        through threat detection and automation.
-      </p>
-
-    </div>
-
-    <!-- Card 3 -->
-    <div
-      class="glass rounded-3xl p-8 hover:scale-105 hover:shadow-[0_0_30px_#00ff88] transition duration-300">
-
-      <div class="text-5xl mb-5">
-        💻
-      </div>
-
-      <h3 class="text-2xl font-bold mb-4">
-        Currently Building
-      </h3>
-
-      <p class="text-lg leading-relaxed">
-        Developing a 
-        <span class="font-semibold text-white">
-          Secure Login System
-        </span>
-        with authentication and protection features.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-  <!-- Footer -->
-  <footer id="socials"
-    class="flex flex-col items-center justify-center p-10 space-y-8">
-
-    <h2 class="text-3xl font-bold">
-      Connect With Me
-    </h2>
-
-    <div class="flex flex-wrap justify-center gap-8">
-
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/cybersurinder/"
-        target="_blank"
-        class="glass p-5 rounded-2xl hover:scale-110 hover:shadow-[0_0_30px_#00ff88] transition duration-300 flex items-center gap-3">
-
-        <img src="https://img.icons8.com/ios-filled/50/00FF88/instagram-new.png"
-          class="w-8 h-8">
-
-        <span>Instagram</span>
-      </a>
-
-      <!-- YouTube -->
-      <a href="https://www.youtube.com/@Cyber_Surinder"
-        target="_blank"
-        class="glass p-5 rounded-2xl hover:scale-110 hover:shadow-[0_0_30px_#00ff88] transition duration-300 flex items-center gap-3">
-
-        <img src="https://img.icons8.com/ios-filled/50/00FF88/youtube-play.png"
-          class="w-8 h-8">
-
-        <span>YouTube</span>
-      </a>
-
-      <!-- LinkedIn -->
-      <a href="http://www.linkedin.com/in/cyber-surinder"
-        target="_blank"
-        class="glass p-5 rounded-2xl hover:scale-110 hover:shadow-[0_0_30px_#00ff88] transition duration-300 flex items-center gap-3">
-
-        <img src="https://img.icons8.com/ios-filled/50/00FF88/linkedin.png"
-          class="w-8 h-8">
-
-        <span>LinkedIn</span>
-      </a>
-
-      <!-- GitHub -->
-      <a href="https://github.com/Whitedevil0237"
-        target="_blank"
-        class="glass p-5 rounded-2xl hover:scale-110 hover:shadow-[0_0_30px_#00ff88] transition duration-300 flex items-center gap-3">
-
-        <img src="https://img.icons8.com/ios-filled/50/00FF88/github.png"
-          class="w-8 h-8">
-
-        <span>GitHub</span>
-      </a>
-
-            <!-- TryHackMe -->
-      <a href="https://tryhackme.com/p/surindersingh07694"
-        target="_blank"
-        class="glass p-5 rounded-2xl hover:scale-110 hover:shadow-[0_0_30px_#00ff88] transition duration-300 flex items-center gap-3">
-
-        <img src="https://assets.tryhackme.com/img/favicon.png"
-            alt="TryHackMe"
-            class="w-8 h-8">
-
-        <span>TryHackMe</span>
-      </a>
-
-    </div>
-
-    <p class="text-sm text-gray-400 mt-6">
-      © 2026 Surinder Singh. All Rights Reserved.
-    </p>
-
-  </footer>
-
-  <!-- JavaScript -->
-  <script>
-
-    // Typewriter Effect
-    const text =
-      "Cyber Security Enthusiast | Ethical Hacker | Defender of the Digital Realm";
-
-    const speed = 50;
-
-    let i = 0;
-
-    function typeWriter() {
-
-      if (i < text.length) {
-
-        document.getElementById("typewriter").innerHTML += text.charAt(i);
-
-        i++;
-
-        setTimeout(typeWriter, speed);
-
-      } else {
-
-        setTimeout(() => {
-
-          document.getElementById("typewriter").innerHTML = "";
-
-          i = 0;
-
-          typeWriter();
-
-        }, 1500);
-
-      }
-
-    }
-
-    window.onload = typeWriter;
-
-    // Mobile Menu
-    const toggleBtn = document.getElementById('menu-toggle');
-
-    const navMenu = document.getElementById('nav-menu');
-
-    toggleBtn.addEventListener('click', () => {
-
-      navMenu.classList.toggle('hidden');
-
-    });
-
-    // Cursor Effect
-    const cursor = document.getElementById('cursor');
-
-    document.addEventListener('mousemove', (e) => {
-
-      cursor.style.left = e.clientX + 'px';
-
-      cursor.style.top = e.clientY + 'px';
-
-    });
-
-    // Dark Mode Toggle
-    const themeToggle = document.getElementById('theme-toggle');
-
-    themeToggle.addEventListener('click', () => {
-
-      document.body.classList.toggle('light-mode');
-
-    });
-
-  </script>
-
+<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-slate-950">
+
+    <!-- Header Navbar -->
+    <header class="w-full border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold text-lg">🛡️</span>
+                <span class="font-bold tracking-wider text-slate-100">SURINDER.DEV</span>
+            </div>
+            <div class="text-xs text-slate-400">
+                status: <span class="text-emerald-400 font-semibold">online</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 px-4 py-6 max-w-4xl mx-auto w-full space-y-6">
+        
+        <!-- Lab Status Widget -->
+        <div class="cyber-card p-4 flex items-center justify-between text-xs sm:text-sm">
+            <div class="flex items-center space-x-3">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                <span class="text-slate-300 font-medium">Active Lab Focus:</span>
+                <span class="text-emerald-400">Cowrie Honeypot Log Pipeline & Red Team Tactics</span>
+            </div>
+        </div>
+
+        <!-- Hero Terminal -->
+        <div class="cyber-card overflow-hidden">
+            <div class="flex items-center justify-between px-4 py-2 bg-slate-900 border-b border-slate-800 text-xs text-slate-400">
+                <div class="flex items-center space-x-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                </div>
+                <div class="text-emerald-400">surinder@kali-sec:~</div>
+                <div></div>
+            </div>
+            
+            <div id="terminal-body" class="p-6 text-sm space-y-3 min-h-[220px] max-h-[300px] overflow-y-auto">
+                <div class="text-slate-300">Welcome to Surinder Singh v2.6.0 [Security & Full-Stack Node]</div>
+                <div class="text-slate-300">Type "help" or click quick commands below to explore.</div>
+            </div>
+
+            <form id="terminal-form" class="flex items-center space-x-2 px-6 py-3 bg-slate-950/80 border-t border-slate-800">
+                <span class="text-emerald-500 text-sm">guest@cybersurinder:~$</span>
+                <input id="terminal-input" type="text" autocomplete="off" placeholder="type 'whoami' or 'skills'..." class="bg-transparent focus:outline-none text-emerald-300 flex-1 text-sm placeholder:text-slate-600">
+            </form>
+
+            <div class="px-6 py-3 bg-slate-950/50 border-t border-slate-800 flex flex-wrap gap-2 items-center text-xs">
+                <span class="text-slate-500">Quick run:</span>
+                <button onclick="runCommand('whoami')" class="px-2.5 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700">whoami</button>
+                <button onclick="runCommand('skills')" class="px-2.5 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700">skills</button>
+                <button onclick="runCommand('projects')" class="px-2.5 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700">projects</button>
+                <button onclick="runCommand('clear')" class="px-2.5 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700">clear</button>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <section class="py-6">
+            <h2 class="text-xl font-bold tracking-tight text-slate-100 mb-6 flex items-center space-x-2">
+                <span>📁 Featured Projects & Labs</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Project 1 -->
+                <div class="cyber-card p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Cybersecurity / Telemetry</span>
+                        <h3 class="text-lg font-bold text-slate-100 mt-3 mb-2">HoneyPort Analyzer</h3>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Low-interaction honeypot and telemetry platform featuring a custom React & Vite dark-mode dashboard for log parsing.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">React</span>
+                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Vite</span>
+                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Python</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="cyber-card p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Threat Detection</span>
+                        <h3 class="text-lg font-bold text-slate-100 mt-3 mb-2">Cowrie Honeypot Pipeline</h3>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Deployed and configured Cowrie honeypot logging pipeline utilizing Docker, Filebeat, Elasticsearch, and Kibana on Kali Linux.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Docker</span>
+                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Elasticsearch</span>
+                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Kibana</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-slate-800 bg-slate-900/30 py-6 text-center text-xs text-slate-500">
+        <p>© 2026 Surinder Singh. Built with HTML, Tailwind CSS & JavaScript.</p>
+    </footer>
+
+    <!-- Terminal Script -->
+    <script>
+        const terminalBody = document.getElementById('terminal-body');
+        const terminalForm = document.getElementById('terminal-form');
+        const terminalInput = document.getElementById('terminal-input');
+
+        function appendToTerminal(text, isInput = false) {
+            const div = document.createElement('div');
+            div.className = isInput ? 'text-emerald-400 font-semibold' : 'text-slate-300';
+            div.textContent = text;
+            terminalBody.appendChild(div);
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+
+        function runCommand(cmdText) {
+            const cleanCmd = cmdText.trim().toLowerCase();
+            let response = '';
+
+            switch (cleanCmd) {
+                case 'whoami':
+                    response = 'Surinder Singh — Biometric Integration Intern @ Shivsoft & Cybersecurity / Red Team Enthusiast.';
+                    break;
+                case 'skills':
+                    response = 'Core: Penetration Testing, Red Teaming, React/Vite, Docker, Elasticsearch, Kibana, n8n Automation.';
+                    break;
+                case 'projects':
+                    response = 'Active Projects: HoneyPort Analyzer, Cowrie Honeypot Pipeline, FollowU Manager.';
+                    break;
+                case 'clear':
+                    terminalBody.innerHTML = '';
+                    return;
+                case 'help':
+                    response = 'Available commands: whoami, skills, projects, clear';
+                    break;
+                default:
+                    response = `Command not recognized: "${cmdText}". Type "help" for a list of commands.`;
+            }
+
+            appendToTerminal(`$ ${cmdText}`, true);
+            appendToTerminal(response, false);
+        }
+
+        terminalForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const val = terminalInput.value;
+            if (val) {
+                runCommand(val);
+                terminalInput.value = '';
+            }
+        });
+    </script>
 </body>
-
 </html>
