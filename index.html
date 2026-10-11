@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surinder Singh | Cybersecurity & Full-Stack Portfolio</title>
+    <title>Surinder Singh | Cybersecurity Specialist & Developer</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,139 +11,289 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        mono: ['JetBrains Mono', 'monospace'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                        sans: ['Inter', 'sans-serif']
                     },
+                    colors: {
+                        cyber: {
+                            bg: '#080d1a',
+                            card: '#0f172a',
+                            accent: '#10b981',
+                            glow: 'rgba(16, 185, 129, 0.15)'
+                        }
+                    }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #020617;
-            color: #f1f5f9;
-            font-family: 'JetBrains Mono', monospace;
-            background-image: radial-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px);
-            background-size: 24px 24px;
+            background-color: #050914;
+            color: #e2e8f0;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+                radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 28px 28px;
         }
         .cyber-card {
-            position: relative;
-            background: rgba(15, 23, 42, 0.8);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(10, 15, 30, 0.95) 100%);
             border: 1px solid rgba(16, 185, 129, 0.2);
             backdrop-filter: blur(12px);
-            border-radius: 0.75rem;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .cyber-card:hover {
             border-color: rgba(16, 185, 129, 0.6);
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.25);
+        }
+        .glow-button {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-slate-950">
+<body class="min-h-screen font-sans selection:bg-emerald-500 selection:text-slate-950">
 
-    <!-- Header Navbar -->
-    <header class="w-full border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <span class="text-emerald-400 font-bold text-lg">🛡️</span>
-                <span class="font-bold tracking-wider text-slate-100">SURINDER.DEV</span>
-            </div>
-            <div class="text-xs text-slate-400">
-                status: <span class="text-emerald-400 font-semibold">online</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main class="flex-1 px-4 py-6 max-w-4xl mx-auto w-full space-y-6">
-        
-        <!-- Lab Status Widget -->
-        <div class="cyber-card p-4 flex items-center justify-between text-xs sm:text-sm">
+    <!-- Navbar -->
+    <nav class="w-full border-b border-slate-800/80 bg-slate-950/70 backdrop-blur-xl sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <span class="relative flex h-3 w-3">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                </span>
-                <span class="text-slate-300 font-medium">Active Lab Focus:</span>
-                <span class="text-emerald-400">Cowrie Honeypot Log Pipeline & Red Team Tactics</span>
-            </div>
-        </div>
-
-        <!-- Hero Terminal -->
-        <div class="cyber-card overflow-hidden">
-            <div class="flex items-center justify-between px-4 py-2 bg-slate-900 border-b border-slate-800 text-xs text-slate-400">
-                <div class="flex items-center space-x-2">
-                    <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
-                    <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
-                    <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono font-bold">
+                    &gt;_
                 </div>
-                <div class="text-emerald-400">surinder@kali-sec:~</div>
-                <div></div>
+                <div>
+                    <span class="font-bold tracking-wider text-slate-100 text-lg block leading-tight">SURINDER SINGH</span>
+                    <span class="text-[10px] font-mono text-emerald-400 tracking-widest uppercase">Red Team & Dev</span>
+                </div>
             </div>
             
-            <div id="terminal-body" class="p-6 text-sm space-y-3 min-h-[220px] max-h-[300px] overflow-y-auto">
-                <div class="text-slate-300">Welcome to Surinder Singh v2.6.0 [Security & Full-Stack Node]</div>
-                <div class="text-slate-300">Type "help" or click quick commands below to explore.</div>
-            </div>
-
-            <form id="terminal-form" class="flex items-center space-x-2 px-6 py-3 bg-slate-950/80 border-t border-slate-800">
-                <span class="text-emerald-500 text-sm">guest@cybersurinder:~$</span>
-                <input id="terminal-input" type="text" autocomplete="off" placeholder="type 'whoami' or 'skills'..." class="bg-transparent focus:outline-none text-emerald-300 flex-1 text-sm placeholder:text-slate-600">
-            </form>
-
-            <div class="px-6 py-3 bg-slate-950/50 border-t border-slate-800 flex flex-wrap gap-2 items-center text-xs">
-                <span class="text-slate-500">Quick run:</span>
-                <button onclick="runCommand('whoami')" class="px-2.5 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700">whoami</button>
-                <button onclick="runCommand('skills')" class="px-2.5 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700">skills</button>
-                <button onclick="runCommand('projects')" class="px-2.5 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700">projects</button>
-                <button onclick="runCommand('clear')" class="px-2.5 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700">clear</button>
+            <div class="flex items-center space-x-6 text-sm font-medium">
+                <a href="#about" class="text-slate-400 hover:text-emerald-400 transition-colors hidden sm:block">About</a>
+                <a href="#projects" class="text-slate-400 hover:text-emerald-400 transition-colors hidden sm:block">Projects</a>
+                <a href="#terminal" class="text-slate-400 hover:text-emerald-400 transition-colors hidden sm:block">Console</a>
+                <div class="flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-xs font-mono text-emerald-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>ONLINE</span>
+                </div>
             </div>
         </div>
+    </nav>
 
-        <!-- Projects Section -->
-        <section class="py-6">
-            <h2 class="text-xl font-bold tracking-tight text-slate-100 mb-6 flex items-center space-x-2">
-                <span>📁 Featured Projects & Labs</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <!-- Project 1 -->
-                <div class="cyber-card p-6 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Cybersecurity / Telemetry</span>
-                        <h3 class="text-lg font-bold text-slate-100 mt-3 mb-2">HoneyPort Analyzer</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Low-interaction honeypot and telemetry platform featuring a custom React & Vite dark-mode dashboard for log parsing.</p>
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Hero Section -->
+        <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">
+                    <span class="text-emerald-400">⚡ Biometric Integration Intern @ Shivsoft</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-100 tracking-tight leading-none">
+                    Securing Networks.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
+                        Building Intelligent Systems.
+                    </span>
+                </h1>
+
+                <p class="text-slate-400 text-base leading-relaxed max-w-xl">
+                    Specializing in offensive red teaming, honeypot telemetry architectures, and full-stack React/Vite development. Focused on analyzing threats, automating workflows, and building secure platforms.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="glow-button px-6 py-3 rounded-lg text-slate-950 font-semibold text-sm transition-all duration-300 flex items-center space-x-2">
+                        <span>Explore Projects</span>
+                        <span>→</span>
+                    </a>
+                    <a href="https://github.com/iarmaanx" target="_blank" class="px-6 py-3 rounded-lg bg-slate-900 border border-slate-700 hover:border-emerald-500/50 text-slate-200 font-semibold text-sm transition-all duration-300 flex items-center space-x-2">
+                        <span>GitHub Profile</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lab Status Box / Badge Grid -->
+            <div class="lg:col-span-5">
+                <div class="cyber-card p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                        <span class="text-xs font-mono text-emerald-400 font-semibold uppercase tracking-wider">Active Telemetry Lab</span>
+                        <span class="text-xs font-mono text-slate-500">v2.6</span>
                     </div>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">React</span>
-                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Vite</span>
-                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Python</span>
+                    
+                    <div class="space-y-3">
+                        <div class="p-3 rounded-lg bg-slate-950/60 border border-slate-800/80">
+                            <div class="text-xs font-mono text-slate-400">Current Focus</div>
+                            <div class="text-sm font-medium text-slate-200 mt-0.5">Cowrie Honeypot & Elasticsearch Pipeline</div>
+                        </div>
+                        <div class="p-3 rounded-lg bg-slate-950/60 border border-slate-800/80">
+                            <div class="text-xs font-mono text-slate-400">Environment</div>
+                            <div class="text-sm font-medium text-emerald-400 font-mono mt-0.5">Kali Linux • Docker • Filebeat • Kibana</div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex justify-between text-xs font-mono text-slate-400">
+                        <span>Threat Score: <strong class="text-emerald-400">Optimal</strong></span>
+                        <span>Uptime: <strong class="text-slate-200">99.9%</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="space-y-8">
+            <div class="flex items-end justify-between border-b border-slate-800/80 pb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-100 flex items-center space-x-3">
+                        <span class="text-emerald-400 font-mono text-xl">01.</span>
+                        <span>Featured Projects & Security Labs</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-1">Production applications, telemetry platforms, and penetration testing tools.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Project 1 -->
+                <div class="cyber-card p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                Telemetry / SIEM
+                            </span>
+                            <span class="text-xs font-mono text-slate-500">2026</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2 hover:text-emerald-400 transition-colors">
+                            HoneyPort Analyzer
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Low-interaction honeypot platform featuring log parsing and threat telemetry visualization dashboard. Built during TechCadd industrial training.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 font-mono text-[11px]">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">React</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Vite</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Tailwind</span>
+                        </div>
+                        <a href="https://github.com/iarmaanx" target="_blank" class="text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-300 flex items-center space-x-1">
+                            <span>View Source</span> <span>→</span>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="cyber-card p-6 flex flex-col justify-between">
+                <div class="cyber-card p-6 rounded-xl flex flex-col justify-between">
                     <div>
-                        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Threat Detection</span>
-                        <h3 class="text-lg font-bold text-slate-100 mt-3 mb-2">Cowrie Honeypot Pipeline</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Deployed and configured Cowrie honeypot logging pipeline utilizing Docker, Filebeat, Elasticsearch, and Kibana on Kali Linux.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                Threat Detection
+                            </span>
+                            <span class="text-xs font-mono text-slate-500">2026</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2 hover:text-emerald-400 transition-colors">
+                            Cowrie Honeypot Pipeline
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            SSH/Telnet honeypot deployment logging brute-force attack vectors and payload attempts into Elasticsearch and Kibana dashboards.
+                        </p>
                     </div>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Docker</span>
-                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Elasticsearch</span>
-                        <span class="text-[11px] px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Kibana</span>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 font-mono text-[11px]">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Docker</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Elasticsearch</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Kibana</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Filebeat</span>
+                        </div>
+                        <a href="https://github.com/iarmaanx" target="_blank" class="text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-300 flex items-center space-x-1">
+                            <span>View Architecture</span> <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="cyber-card p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                Web App / Portfolio
+                            </span>
+                            <span class="text-xs font-mono text-slate-500">Live</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2 hover:text-emerald-400 transition-colors">
+                            FollowU Manager
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Clean management platform with custom UI, automated workflow integrations, and full Netlify cloud hosting deployment.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 font-mono text-[11px]">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">React</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Netlify</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">Node</span>
+                        </div>
+                        <a href="https://cybersurinder.netlify.app/" target="_blank" class="text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-300 flex items-center space-x-1">
+                            <span>Visit Live App</span> <span>→</span>
+                        </a>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- Compact Interactive Terminal Console -->
+        <section id="terminal" class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h2 class="text-2xl font-bold text-slate-100 flex items-center space-x-3">
+                    <span class="text-emerald-400 font-mono text-xl">02.</span>
+                    <span>Interactive Shell</span>
+                </h2>
+                <span class="text-xs font-mono text-slate-500">surinder@kali-sec:~</span>
+            </div>
+
+            <div class="cyber-card rounded-xl overflow-hidden font-mono text-xs sm:text-sm">
+                <!-- Window Header -->
+                <div class="flex items-center justify-between px-4 py-2.5 bg-slate-950 border-b border-slate-800">
+                    <div class="flex items-center space-x-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                    </div>
+                    <span class="text-slate-500 text-xs">bash - 80x24</span>
+                    <div></div>
+                </div>
+
+                <!-- Terminal Body -->
+                <div id="terminal-body" class="p-5 space-y-2.5 min-h-[160px] max-h-[240px] overflow-y-auto bg-slate-950/80 text-slate-300">
+                    <div>Welcome to Surinder Singh Security Console. Type <span class="text-emerald-400">'help'</span> for options.</div>
+                </div>
+
+                <!-- Input Form -->
+                <form id="terminal-form" class="flex items-center space-x-2 px-5 py-3 bg-slate-950 border-t border-slate-800">
+                    <span class="text-emerald-400 font-bold">guest@surinder:~$</span>
+                    <input id="terminal-input" type="text" autocomplete="off" placeholder="type command..." class="bg-transparent focus:outline-none text-emerald-300 flex-1 text-xs sm:text-sm">
+                </form>
+
+                <!-- Quick Run Buttons -->
+                <div class="px-5 py-2.5 bg-slate-900/50 border-t border-slate-800/80 flex items-center space-x-2 text-xs">
+                    <span class="text-slate-500">Quick run:</span>
+                    <button onclick="runCommand('whoami')" class="px-2 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700 transition-colors">whoami</button>
+                    <button onclick="runCommand('skills')" class="px-2 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700 transition-colors">skills</button>
+                    <button onclick="runCommand('clear')" class="px-2 py-1 bg-slate-800 hover:bg-emerald-500/20 hover:text-emerald-300 text-slate-300 rounded border border-slate-700 transition-colors">clear</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="w-full border-t border-slate-800 bg-slate-900/30 py-6 text-center text-xs text-slate-500">
-        <p>© 2026 Surinder Singh. Built with HTML, Tailwind CSS & JavaScript.</p>
+    <footer class="w-full border-t border-slate-800/80 bg-slate-950 py-8 mt-16 text-center text-xs font-mono text-slate-500">
+        <p>© 2026 Surinder Singh. All rights reserved.</p>
     </footer>
 
     <!-- Terminal Script -->
@@ -166,22 +316,19 @@
 
             switch (cleanCmd) {
                 case 'whoami':
-                    response = 'Surinder Singh — Biometric Integration Intern @ Shivsoft & Cybersecurity / Red Team Enthusiast.';
+                    response = 'Surinder Singh — Biometric Integration Intern @ Shivsoft & Cybersecurity / Red Team Specialist.';
                     break;
                 case 'skills':
-                    response = 'Core: Penetration Testing, Red Teaming, React/Vite, Docker, Elasticsearch, Kibana, n8n Automation.';
-                    break;
-                case 'projects':
-                    response = 'Active Projects: HoneyPort Analyzer, Cowrie Honeypot Pipeline, FollowU Manager.';
+                    response = 'Core Skills: Penetration Testing, Red Teaming, React/Vite, Docker, Elasticsearch, Kibana, n8n Automation.';
                     break;
                 case 'clear':
                     terminalBody.innerHTML = '';
                     return;
                 case 'help':
-                    response = 'Available commands: whoami, skills, projects, clear';
+                    response = 'Commands: whoami, skills, clear';
                     break;
                 default:
-                    response = `Command not recognized: "${cmdText}". Type "help" for a list of commands.`;
+                    response = `Command not found: "${cmdText}". Type 'help' for available commands.`;
             }
 
             appendToTerminal(`$ ${cmdText}`, true);
