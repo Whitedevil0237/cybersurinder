@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications | Surinder Singh</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/00FF88/security-checked.png">
+</head>
+
+<body class="bg-black text-green-400 font-sans scroll-smooth">
+
+ <nav
+    class="glass flex items-center justify-between p-4 border-b border-green-500  top-0 z-50">
+
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="/src/logoi.png"
+        alt="Logo"
+        class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover border border-green-500">
+
+      <h1 class="text-xl sm:text-2xl font-bold">
+        Surinder Singh
+      </h1>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 font-semibold text-lg">
+      <li>
+        <a href="index.html"
+          class="hover:text-white transition duration-300 hover:scale-110">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="about.html"
+          class="hover:text-white transition duration-300 hover:scale-110">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="projects.html"
+          class="hover:text-white transition duration-300 hover:scale-110">
+          Projects
+        </a>
+      </li>
+
+      <li>
+        <a href="resume.html"
+          class="hover:text-white transition duration-300 hover:scale-110">
+          Resume
+        </a>
+      </li>
+
+      <li>
+        <a href="certifications.html"
+          class="hover:text-white transition duration-300 hover:scale-110">
+          Certifications
+        </a>
+      </li>
+    </ul>
+
+    <!-- Right Side -->
+    <div class="flex items-center gap-4">
+
+      <!-- Dark Mode Toggle -->
+      <button id="theme-toggle"
+        class="border border-green-500 px-4 py-2 rounded-xl hover:bg-green-500 hover:text-black transition duration-300">
+        🌙
+      </button>
+
+      <!-- Hamburger -->
+      <button id="menu-toggle"
+        class="md:hidden text-green-400">
+        <svg class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="nav-menu"
+      class="hidden absolute top-20 right-4 glass rounded-2xl p-6 w-52 z-50 md:hidden flex flex-col gap-5 text-lg">
+
+      <a href="index.html"
+        class="hover:text-white transition">
+        Home
+      </a>
+
+      <a href="about.html"
+        class="hover:text-white transition">
+        About
+      </a>
+
+      <a href="projects.html"
+        class="hover:text-white transition">
+        Projects
+      </a>
+
+      <a href="resume.html"
+        class="hover:text-white transition">
+        Resume
+      </a>
+
+      <a href="certifications.html"
+        class="hover:text-white transition">
+        Certifications
+      </a>
+
+    </div>
+
+  </nav>
+
+
+<!-- Certifications Section -->
+<section class="p-8 text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-10">My Certifications</h2>
+
+<div class="flex justify-center">
+  <iframe 
+    src="https://drive.google.com/embeddedfolderview?id=1CM8zrioPSYToLZDsQTK_Zg0gg6IdByK1#grid" 
+    class="w-full max-w-6xl h-[900px] border-0 rounded-lg shadow-lg">
+  </iframe>
+</div>
+
+</section>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="flex flex-col items-center justify-center p-8 space-y-5 border-t border-green-500">
+    <p class="text-lg">&copy; 2025 Surinder Singh | Cyber Security Enthusiast</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

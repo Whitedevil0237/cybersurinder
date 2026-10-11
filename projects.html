@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Surinder Singh</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/00FF88/security-checked.png">
+</head>
+
+<body class="bg-black text-green-400 font-sans">
+
+<nav
+    class="glass flex items-center justify-between p-4 border-b border-green-500  top-0 z-50">
+
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="/src/logoi.png"
+        alt="Logo"
+        class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover border border-green-500">
+
+      <h1 class="text-xl sm:text-2xl font-bold">
+        Surinder Singh
+      </h1>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 font-semibold text-lg">
+      <li>
+        <a href="index.html"
+          class="hover:text-white transition duration-300 hover:scale-110">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="about.html"
+          class="hover:text-white transition duration-300 hover:scale-110">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="projects.html"
+          class="hover:text-white transition duration-300 hover:scale-110">
+          Projects
+        </a>
+      </li>
+
+      <li>
+        <a href="resume.html"
+          class="hover:text-white transition duration-300 hover:scale-110">
+          Resume
+        </a>
+      </li>
+
+      <li>
+        <a href="certifications.html"
+          class="hover:text-white transition duration-300 hover:scale-110">
+          Certifications
+        </a>
+      </li>
+    </ul>
+
+    <!-- Right Side -->
+    <div class="flex items-center gap-4">
+
+      <!-- Dark Mode Toggle -->
+      <button id="theme-toggle"
+        class="border border-green-500 px-4 py-2 rounded-xl hover:bg-green-500 hover:text-black transition duration-300">
+        🌙
+      </button>
+
+      <!-- Hamburger -->
+      <button id="menu-toggle"
+        class="md:hidden text-green-400">
+        <svg class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="nav-menu"
+      class="hidden absolute top-20 right-4 glass rounded-2xl p-6 w-52 z-50 md:hidden flex flex-col gap-5 text-lg">
+
+      <a href="index.html"
+        class="hover:text-white transition">
+        Home
+      </a>
+
+      <a href="about.html"
+        class="hover:text-white transition">
+        About
+      </a>
+
+      <a href="projects.html"
+        class="hover:text-white transition">
+        Projects
+      </a>
+
+      <a href="resume.html"
+        class="hover:text-white transition">
+        Resume
+      </a>
+
+      <a href="certifications.html"
+        class="hover:text-white transition">
+        Certifications
+      </a>
+
+    </div>
+
+  </nav>
+
+  
+  <!-- Projects Section -->
+  <section class="max-w-5xl mx-auto p-8">
+    <h2 class="text-4xl font-bold mb-8 text-center">My Work & Projects</h2>
+
+    <div class="grid md:grid-cols-2 gap-20">
+<!-- Project 1 -->
+<div class="bg-gray-900 rounded-lg p-6 border border-green-500 flex flex-col justify-between">
+  <div>
+    <h3 class="text-2xl font-semibold mb-4">Password Strength Checker</h3>
+    <img src="/src/password.jpeg" alt="Password Strength Checker" class="rounded-lg mb-4 border border-green-500">
+    <p class="mb-4">A simple and effective tool that evaluates your password's strength in real-time based on criteria like length, character variety, and special symbols.</p>
+  </div>
+  <div class="flex space-x-4 mt-4">
+    <a href="https://password-strength-checker-surinder.netlify.app" target="_blank" class="bg-green-500 text-black px-4 py-2 rounded-lg font-bold hover:bg-green-600 transition">Live Site</a>
+    <a href="https://github.com/Whitedevil0237/Password-Strength-Checker" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/00FF88/github.png" alt="GitHub Repo" class="hover:opacity-80 transition">
+    </a>
+  </div>
+</div>
+
+<!-- Project 2 -->
+<div class="bg-gray-900 rounded-lg p-6 border border-green-500 flex flex-col justify-between">
+  <div>
+    <h3 class="text-2xl font-semibold mb-4">Guess the Password Game</h3>
+    <img src="/src/guess the password.jpg" alt="Guess the Password Game" class="rounded-lg mb-4 border border-green-500">
+    <p class="mb-4">A fun and interactive game where you have to guess the secret password using given hints. Test your logic and luck as you try to crack the code within limited attempts!</p>
+  </div>
+  <div class="flex space-x-4 mt-4">
+    <a href="https://password-guess-game.netlify.app/" target="_blank" class="bg-green-500 text-black px-4 py-2 rounded-lg font-bold hover:bg-green-600 transition">Live Site</a>
+    <a href="https://github.com/Whitedevil0237/Password-Guess-Game" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/00FF88/github.png" alt="GitHub Repo" class="hover:opacity-80 transition">
+    </a>
+  </div>
+</div>
+
+    </div>
+
+
+  <div class="grid md:grid-cols-2 gap-20">
+
+<!-- Project 3 -->
+<div class="bg-gray-900 rounded-lg p-6 border border-green-500 flex flex-col justify-between mt-16">
+  <div>
+    <h3 class="text-2xl font-semibold mb-4">Encryption & Decryption</h3>
+    <img src="src/encryption.jpeg" alt="Encryption & Decryption" class="rounded-lg mb-4 border border-green-500">
+    <p class="mb-4">A simple and secure tool that allows users to encrypt and decrypt messages in real-time, ensuring private communication by converting text into unreadable formats and restoring it when needed.</p>
+  </div>
+  <div class="flex space-x-4 mt-4">
+    <a href="https://msg-securely.netlify.app" target="_blank" class="bg-green-500 text-black px-4 py-2 rounded-lg font-bold hover:bg-green-600 transition">Live Site</a>
+    <a href="https://github.com/Whitedevil0237/Encryption-Decryption-" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/00FF88/github.png" alt="GitHub Repo" class="hover:opacity-80 transition">
+    </a>
+  </div>
+</div>
+
+<!-- Project 4 -->
+<div class="bg-gray-900 rounded-lg p-6 border border-green-500 flex flex-col justify-between mt-16">
+  <div>
+    <h3 class="text-2xl font-semibold mb-4">Instagram Fake Login Page</h3>
+    <img src="src\phishing.webp" alt="Fake Login Page Project" class="rounded-lg mb-4 border border-green-500">
+    <p class="mb-4">
+      A security awareness project that demonstrates how phishing attacks work by simulating a fake login page. 
+      This project helps users understand the importance of identifying suspicious links and protecting their credentials online.
+    </p>
+  </div>
+  <div class="flex space-x-4 mt-4">
+    <a href="https://fakelogin-page.netlify.app/" target="_blank" class="bg-green-500 text-black px-4 py-2 rounded-lg font-bold hover:bg-green-600 transition">Live Site</a>
+    <a href="https://github.com/Whitedevil0237/fake-login-page" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/00FF88/github.png" alt="GitHub Repo" class="hover:opacity-80 transition">
+    </a>
+  </div>
+</div>
+<!-- Project 5 -->
+<div class="bg-gray-900 rounded-lg p-6 border border-green-500 flex flex-col justify-between mt-16">
+  <div>
+    <h3 class="text-2xl font-semibold mb-4">FollowU Manager</h3>
+    <img src="src/followu.webp" alt="FollowU Manager Project" class="rounded-lg mb-4 border border-green-500">
+    <p class="mb-4">
+      A web application designed to manage and track follower analytics, engagement, and user interactions smoothly.
+    </p>
+  </div>
+  <div class="flex space-x-4 mt-4">
+    <a href="https://followumanager.netlify.app/" target="_blank" class="bg-green-500 text-black px-4 py-2 rounded-lg font-bold hover:bg-green-600 transition">Live Demo</a>
+    <a href="https://github.com/Whitedevil0237/Followupmanager" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/00FF88/github.png" alt="GitHub Repo" class="hover:opacity-80 transition">
+    </a>
+  </div>
+</div>
+<!-- Project 6 -->
+<div class="bg-gray-900 rounded-lg p-6 border border-green-500 flex flex-col justify-between mt-16">
+  <div>
+    <h3 class="text-2xl font-semibold mb-4">Cyber Defense Simulator</h3>
+    <img src="src/cyber-defense.webp" alt="Cyber Defense Simulator Project" class="rounded-lg mb-4 border border-green-500">
+    <p class="mb-4">
+      An interactive security simulation application built to demonstrate threat detection, defense strategies, and real-time incident analysis.
+    </p>
+  </div>
+  <div class="flex space-x-4 mt-4">
+    <a href="https://cyber-defense-sim--surindersingh01.replit.app/" target="_blank" class="bg-green-500 text-black px-4 py-2 rounded-lg font-bold hover:bg-green-600 transition">Live Demo</a>
+    <a href="https://github.com/Whitedevil0237/YOUR-REPO-NAME" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/00FF88/github.png" alt="GitHub Repo" class="hover:opacity-80 transition">
+    </a>
+  </div>
+</div>
+
+  </div>
+
+  </section> 
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+  });
+  </script>
+
+</body>
+
+</html>
+
+
